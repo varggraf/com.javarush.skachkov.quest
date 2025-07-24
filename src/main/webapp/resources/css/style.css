@@ -1,0 +1,174 @@
+/* Базовые стили */
+:root {
+    --primary-color: #2c3e53;
+    --secondary-color: #3498df;
+    --success-color: #2ecc65;
+    --danger-color: #e74c3c;
+    --light-color: #ecf0f1;
+    --dark-color: #34495e;
+    --highlight-color: #f39c12;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 1px;
+    padding: 1px;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f5f5;
+    color: var(--dark-color);
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* Класс контейнера для центрирования содержимого */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Стили заголовков */
+h1 {
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 2.2rem;
+}
+
+.result-title {
+    text-align: center;
+    margin: 1.5rem 0;
+    font-size: 2.5rem;
+}
+
+.victory {
+    color: var(--success-color);
+}
+
+.defeat {
+    color: var(--danger-color);
+}
+
+/* Стили для текстовых блоков */
+.story, .game-message, .result-message {
+    background-color: var(--light-color);
+    padding: 1.5rem;
+    border-radius: 6px;
+    margin-bottom: 1.5rem;
+    border-left: 4px solid var(--secondary-color);
+}
+
+.story p, .game-message p, .result-message p {
+    margin-bottom: 0.8rem;
+}
+
+.story p:last-child, .game-message p:last-child, .result-message p:last-child {
+    margin-bottom: 0;
+}
+
+/* Стили для информации об игроке */
+.player-info, .player-stats {
+    background-color: #f8f9fa;
+    padding: 1rem;
+    border-radius: 6px;
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+}
+
+.highlight {
+    font-weight: bold;
+    color: var(--highlight-color);
+}
+
+/* Стили для форм */
+.player-form, .choice-form, .restart-form {
+    margin-top: 2rem;
+}
+
+.form-input {
+    width: 100%;
+    padding: 0.8rem;
+    margin: 0.8rem 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+/* Стили для кнопок */
+.start-button, .choice-button, .restart-button {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    margin: 0.8rem 0;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.start-button {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+.start-button:hover {
+    background-color: #2980b9;
+}
+
+.choice-button {
+    background-color: var(--primary-color);
+    color: white;
+    margin: 0.5rem 0;
+}
+
+.choice-button:hover {
+    background-color: #1a252f;
+}
+
+.restart-button {
+    background-color: var(--highlight-color);
+    color: white;
+}
+
+.restart-button:hover {
+    background-color: #e67e22;
+}
+
+/* Стили для сообщений об ошибках */
+.error-message {
+    background-color: #fdecea;
+    color: var(--danger-color);
+    padding: 1rem;
+    border-radius: 4px;
+    margin: 1rem 0;
+    border-left: 4px solid var(--danger-color);
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 600px) {
+    .container {
+        padding: 1rem;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    .story, .game-message, .result-message {
+        padding: 1rem;
+    }
+}
